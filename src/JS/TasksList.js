@@ -4,14 +4,16 @@ import TasksListHeader from './TasksListHeader'
 
 export default class TasksList extends Component {
     render() {
-        console.log(todos);
-        const todos = this.props.todos.map(todo => 
-        <td className='tasks-list' key={ todo.index }>
-                <todo
-                    todo={ todo.task }
-                    isCompleted={ false }
-                />
-            </td>
+        const todos = this.props.todos.map(todo =>
+            <tr id={ todo.task }>
+                <td>
+                    <p>{ todo.task }</p>
+                </td>
+                <td>
+                <input type='button' onClick={ this.changeTaskColor} value='Done'/>
+                <input type='button' value='Delete'/>
+                </td>
+            </tr>
         );
         return (
             <table>
@@ -21,5 +23,8 @@ export default class TasksList extends Component {
                 </tbody>
             </table>
         )
+    }
+    changeTaskColor(id) {
+        document.getElementsByClassName(id)[0].style.color = 'green';
     }
 }

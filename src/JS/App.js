@@ -7,15 +7,20 @@ import TasksList from './TasksList'
 const todos = [
   {
     task: 'Write working App',
-    isCompleted: false  
   },
   {
     task: 'eat dinner',
-    isCompleted: true
   }
 ];
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      todos: todos
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -24,7 +29,7 @@ class App extends Component {
           <h2>TODO React App</h2>
         </div>
         <TodosInput />
-        <TasksList todos={ todos } />
+        <TasksList todos={this.state.todos}/>
       </div>
     );
   }
