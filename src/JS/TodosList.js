@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import '../styles/TODOList.css';
 
-export default class TodosList extends Component {
+export default class TodosInput extends Component {
     render() {
         return (
             <div className='add-tasks'>

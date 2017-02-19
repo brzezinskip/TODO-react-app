@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './styles/logo.svg';
-import './styles/App.css';
-import TodosList from './TodosList'
+import logo from '../styles/logo.svg';
+import '../styles/App.css';
+import TodosInput from './TodosList'
+import TasksList from './TasksList'
 
 const todos = [
   {
@@ -15,6 +16,13 @@ const todos = [
 ];
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      todos: todos
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -22,7 +30,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>TODO React App</h2>
         </div>
-        <TodosList />
+        <TodosInput />
+        <TasksList todos={this.state.todos}/>
       </div>
     );
   }
