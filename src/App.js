@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import logo from './styles/logo.svg';
 import './styles/App.css';
-import TodosList from './TODO/TODOList'
+import TodosList from './TodosList'
+
+const todos = [
+  {
+    task: 'Write working App',
+    isCompleted: false  
+  },
+  {
+    task: 'eat dinner',
+    isCompleted: true
+  }
+];
 
 class App extends Component {
   render() {
