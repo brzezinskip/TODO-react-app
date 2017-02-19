@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './styles/logo.svg';
 import './styles/App.css';
-import TODO from './TODO/TODOList'
+import TodosList from './TODO/TODOList'
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>TODO React App</h2>
         </div>
-        <TODO />
+        <TodosList />
       </div>
     );
   }

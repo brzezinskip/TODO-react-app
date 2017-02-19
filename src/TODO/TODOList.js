@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import React from 'react';
 import '../styles/TODOList.css';
 
-class TodosList extends React.Component {
+export default class TodosList extends Component {
     render(){
         return (
             <div className='add-tasks-container'>
