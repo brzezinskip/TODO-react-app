@@ -4,13 +4,21 @@ import TasksListHeader from './TasksListHeader'
 
 export default class TasksList extends Component {
     render() {
-        console.log(this.props.todos);
+        console.log(todos);
+        const todos = this.props.todos.map(todo => 
+        <td className='tasks-list' key={ todo.index }>
+                <todo
+                    todo={ todo.task }
+                    isCompleted={ false }
+                />
+            </td>
+        );
         return (
             <table>
                 <TasksListHeader />
-                <tr>
-                    
-                </tr>
+                <tbody>
+                    { todos }
+                </tbody>
             </table>
         )
     }

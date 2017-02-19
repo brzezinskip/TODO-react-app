@@ -16,13 +16,6 @@ const todos = [
 ];
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      todos: todos
-    };
-  }
   render() {
     return (
       <div className="App">
@@ -31,7 +24,7 @@ class App extends Component {
           <h2>TODO React App</h2>
         </div>
         <TodosInput />
-        <TasksList todos={this.state.todos}/>
+        <TasksList todos={ todos } />
       </div>
     );
   }
