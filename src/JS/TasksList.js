@@ -4,16 +4,22 @@ import TasksListHeader from './TasksListHeader'
 
 export default class TasksList extends Component {
     changeTaskColor(event) {
-        event.target.style.color = 'green';
+        const eventTarget = event.target;
+        if(eventTarget.style.color === 'green') {
+            eventTarget.style.color = '#000';
+        } else {
+            eventTarget.style.color = 'green';
+            eventTarget.style.fontWeight = 'normal';
+        }
     }
     render() {
         const todos = this.props.todos.map(todo =>
-            <tr>
+            <tr class='tasks-table-row'>
                 <td>
-                    <p onClick={ this.changeTaskColor}>{ todo.task }</p>
+                    <p onClick={ this.changeTaskColor} className='tasks-table-txt'>{ todo.task }</p>
                 </td>
                 <td>
-                <input type='button' value='Delete'/>
+                    <input type='button' className='tasks-table-btn' value='Delete'/>
                 </td>
             </tr>
         );

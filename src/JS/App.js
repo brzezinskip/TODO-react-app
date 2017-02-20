@@ -7,11 +7,9 @@ import TasksList from './TasksList'
 const todos = [
   {
     task: 'Write working App',
-    id: 0
   },
   {
     task: 'eat dinner',
-    id: 1
   }
 ];
 
@@ -30,8 +28,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>TODO React App</h2>
         </div>
-        <TodosInput />
-        <TasksList todos={this.state.todos}/>
+        <TodosInput todos={ this.state.todos }/>
+        <TasksList todos={ this.state.todos }/>
       </div>
     );
   }
