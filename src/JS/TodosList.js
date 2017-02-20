@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import '../styles/TodosList/TodosList.css';
 
 export default class TodosInput extends Component {
-        addTask() {
+    constructor(props) {
+        super(props);
+        this.addTask = this.addTask.bind(this);
+        console.log(props);
+    })
+    addTask() {
         const alertMessage = document.getElementsByClassName('alert')[0];
         const input = document.getElementsByClassName('add-tasks-field')[0];
         if(input.value.length === 0) {
