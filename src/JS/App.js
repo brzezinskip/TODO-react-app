@@ -7,9 +7,11 @@ import TasksList from './TasksList'
 const todos = [
   {
     task: 'Write working App',
+    id: 0
   },
   {
     task: 'eat dinner',
+    id: 1
   }
 ];
 
